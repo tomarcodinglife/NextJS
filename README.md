@@ -6,4 +6,8 @@
 
 ```
 
-# Why
+# Run NextJS folder
+
+``` terminal
+ npm run dev
+```
