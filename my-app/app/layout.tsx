@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-import Header from "@/components/header"; // you can also import like "../components/header"
-import Footer from "@/components/footer"; // // you can also import like "../components/footer"
+import Footer from "@/components/Footer";
 import NavbarWithChildren from "@/components/NavbarWithChildren";
 
 
@@ -18,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tomar Soft",
+  title: "Cyser - India's Tursted Technology Solution Partner",
   description: "India's Top IT Service Provider",
 };
 
@@ -38,7 +37,6 @@ export default function RootLayout({
 
       <body className="min-h-full flex flex-col">
         <NavbarWithChildren/>
-        <Header/>
           <main>
               
               {children}

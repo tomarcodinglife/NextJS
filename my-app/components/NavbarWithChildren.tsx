@@ -9,7 +9,12 @@ import { ChevronDown, Menu, X } from "lucide-react";
 // ─── Types ───────────────────────────────────────────────────────────────────
 
 type NavChild =
-  | { type: "link"; label: string; href: string }
+
+  | { 
+    type: "link"; 
+    label: string; 
+    href: string }
+
   | {
       type: "product";
       title: string;
@@ -60,6 +65,7 @@ const NAV_ITEMS: NavItem[] = [
       },
     ],
   },
+
   {
     label: "Solutions",
     children: [
@@ -94,14 +100,18 @@ function ProductItem({
       <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-lg border border-white/10 bg-white/5">
         <Image src={image} alt={title} fill className="object-cover" />
       </div>
+
       <div>
+
         <p className="text-sm font-semibold text-white group-hover:text-sky-300 transition-colors">
           {title}
         </p>
+
         <p className="mt-0.5 text-xs leading-relaxed text-neutral-400">
           {description}
         </p>
       </div>
+
     </Link>
   );
 }
@@ -272,9 +282,9 @@ export default function NavbarWithChildren() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-sky-500 text-white font-bold text-sm">
-            D
+            C
           </div>
-          <span className="text-sm font-bold text-white">DevStudio</span>
+          <span className="text-sm font-bold text-white">Cyser</span>
         </Link>
 
         {/* Desktop Nav */}
@@ -299,10 +309,10 @@ export default function NavbarWithChildren() {
             Sign in
           </Link>
           <Link
-            href="/signup"
+            href="/contact"
             className="rounded-full bg-sky-500 px-4 py-2 text-sm font-semibold text-white shadow-md shadow-sky-900/40 hover:bg-sky-400 transition-colors"
           >
-            Get started
+            Contact Us
           </Link>
         </div>
 
