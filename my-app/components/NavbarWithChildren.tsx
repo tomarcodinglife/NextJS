@@ -81,22 +81,9 @@ const NAV_ITEMS: NavItem[] = [
 
 // ─── ProductItem ─────────────────────────────────────────────────────────────
 
-function ProductItem({
-  title,
-  description,
-  href,
-  image,
-}: {
-  title: string;
-  description: string;
-  href: string;
-  image: string;
-}) {
+function ProductItem({ title, description, href, image,}: { title: string; description: string; href: string; image: string;}) {
   return (
-    <Link
-      href={href}
-      className="group flex items-start gap-3 rounded-xl p-3 transition-colors hover:bg-white/10"
-    >
+    <Link href={href} className="group flex items-start gap-3 rounded-xl p-3 transition-colors hover:bg-white/10">
       <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-lg border border-white/10 bg-white/5">
         <Image src={image} alt={title} fill className="object-cover" />
       </div>
